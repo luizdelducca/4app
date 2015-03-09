@@ -1,0 +1,14 @@
+# copy these rules into a file on your server called .htaccess
+# or simply rename this file!
+
+#########Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* /home.php [L]
+
+ErrorDocument 403 /403.html
+
+
+ErrorDocument 404 /404.html
+
